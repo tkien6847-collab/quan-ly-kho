@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+          <!-- Phiên bản chuẩn của file POM -->
+    <modelVersion>4.0.0</modelVersion>
+     <!--
+        Spring Boot Parent:
+        Cung cấp cấu hình mặc định và quản lý phiên bản
+        của nhiều thư viện Spring Boot.
+    -->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.5</version>
+        <relativePath/>
+    </parent>
+
+     <!-- Thông tin định danh của project -->
+    <groupId>com.quanlykho</groupId>
+    <artifactId>quan-ly-kho</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- Tên và mô tả project -->
+    <name>quan-ly-kho</name>
+    <description>Project quan ly kho</description>
+        <!-- Cấu hình phiên bản Java -->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+      <!--
+            Spring Web:
+            Dùng để xây dựng Backend và REST API.
+            Ví dụ: API đăng nhập, API sản phẩm, API nhập kho...
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+         <!--
+            Spring Data JPA:
+            Giúp Java làm việc với Database thông qua Entity/Repository.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+          <!--
+            MySQL Connector:
+            Driver giúp Spring Boot kết nối với MySQL.
+        -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+    </dependencies>
+      <!-- Cấu hình quá trình build project -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

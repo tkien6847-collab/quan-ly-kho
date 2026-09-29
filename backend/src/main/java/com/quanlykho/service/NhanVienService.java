@@ -54,4 +54,9 @@ public class NhanVienService {
 	public void deleteNhanVien(Long id) {
 		nhanVienRepository.deleteById(id);
 	}
+
+	// Đăng nhập
+public Optional<NhanVien> login(String tenDangNhap, String matKhau) {
+    return nhanVienRepository.findByTenDangNhapAndMatKhau(tenDangNhap, matKhau);
+}
 }

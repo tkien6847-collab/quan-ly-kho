@@ -1,18 +1,17 @@
 package com.quanlykho.entity;
+//cho biết class này nằm trong com.quanlykho.entity
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.Entity;//phải có nó  @Entity hoạt động các import khác cũng như vậy
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "nhan_vien")
+@Entity//báo với jpa rằng đây là một thực thể (entity) và sẽ được ánh xạ tới một bảng trong cơ sở dữ liệu.
+@Table(name = "nhan_vien")//ứng bảng nhân viên
 public class NhanVien {
 
-    // Mã nhân viên - khóa chính
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+        
+    @Id// Mã nhân viên - khóa chính
     private Long maNV;
 
     // Tên đăng nhập
@@ -33,7 +32,7 @@ public class NhanVien {
     // Vai trò: QUAN_LY hoặc NHAN_VIEN
     private String vaiTro;
 
-    // Constructor rỗng
+    // Constructor rỗng tạo nhân viên chưa có dữ liệu , jpa và hibernate lấy duex liệu từ db điền vào object
     public NhanVien() {
     }
 

@@ -1,0 +1,152 @@
+/* Thiết lập màu sắc và kiểu chữ chung cho trang đăng nhập. */
+:root {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #243447;
+    background: #f3f6fa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Căn card vào giữa màn hình trên cả máy tính và điện thoại. */
+.login-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 32px 20px;
+    background: linear-gradient(145deg, #f7f9fc 0%, #edf3f9 100%);
+}
+
+.login-card {
+    width: min(100%, 420px);
+    padding: 40px 42px 30px;
+    border: 1px solid #e5ebf2;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 14px 36px rgba(35, 63, 94, 0.09);
+    text-align: center;
+}
+
+.brand-mark {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 18px;
+    place-items: center;
+    border-radius: 10px;
+    background: #eaf3ff;
+    color: #1769aa;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+    color: #183b5b;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 10px 0 30px;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #d6dee8;
+    border-radius: 6px;
+    outline: none;
+    background: #ffffff;
+    color: #243447;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-group input::placeholder {
+    color: #9aa8b7;
+}
+
+.form-group input:focus {
+    border-color: #2878bd;
+    box-shadow: 0 0 0 3px rgba(40, 120, 189, 0.13);
+}
+
+/* Chừa sẵn chiều cao để thông báo không làm xô lệch nút. */
+.login-message {
+    min-height: 20px;
+    margin: -4px 0 12px;
+    color: #c0392b;
+    font-size: 13px;
+}
+
+.login-button {
+    width: 100%;
+    min-height: 46px;
+    border: 0;
+    border-radius: 6px;
+    background: #1769aa;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.login-button:hover {
+    transform: translateY(-1px);
+    background: #125b96;
+    box-shadow: 0 5px 12px rgba(23, 105, 170, 0.2);
+}
+
+.login-button:focus-visible {
+    outline: 3px solid rgba(40, 120, 189, 0.3);
+    outline-offset: 3px;
+}
+
+.footer-note {
+    margin: 25px 0 0;
+    color: #9aa8b7;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 20px 16px;
+    }
+
+    .login-card {
+        padding: 32px 24px 26px;
+    }
+}

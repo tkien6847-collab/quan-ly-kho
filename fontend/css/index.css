@@ -65,6 +65,7 @@ h1 { margin-bottom: 9px; color: var(--navy); font-size: clamp(25px, 3vw, 32px); 
 .trend { font-size: 11px; font-weight: 700; }
 .positive { color: #21845f; }
 .negative { color: #c04444; }
+.neutral, .neutral-status { color: #99a7b8; }
 .stat-label { margin-bottom: 7px; color: var(--muted); font-size: 13px; }
 .stat-value { display: block; margin-bottom: 5px; color: var(--navy); font-size: 28px; line-height: 1; }
 .stat-note { margin: 0; color: #a0abba; font-size: 11px; }
@@ -75,7 +76,7 @@ h2 { margin-bottom: 0; color: var(--navy); font-size: 20px; }
 .updated-time { padding-top: 2px; color: #99a7b8; font-size: 11px; }
 .inventory-layout { display: grid; grid-template-columns: minmax(250px, .8fr) 1.2fr; gap: 48px; padding-top: 28px; }
 .inventory-overview { display: flex; align-items: center; justify-content: center; gap: clamp(24px, 5vw, 58px); }
-.donut { position: relative; display: grid; width: 164px; height: 164px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: conic-gradient(#3f94d2 0deg 259deg, #f3bd68 259deg 328deg, #e89a9a 328deg 360deg); }
+.donut { position: relative; display: grid; width: 164px; height: 164px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #edf2f6; }
 .donut::before { position: absolute; width: 124px; height: 124px; border-radius: 50%; background: #fff; content: ""; }
 .donut span { z-index: 1; display: grid; gap: 3px; text-align: center; }
 .donut strong { color: var(--navy); font-size: 27px; }

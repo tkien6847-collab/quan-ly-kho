@@ -135,6 +135,28 @@ h1 {
     outline-offset: 3px;
 }
 
+.register-note {
+    margin: 18px 0 0;
+    color: #718096;
+    font-size: 13px;
+}
+
+.register-note a {
+    color: #1769aa;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-note a:hover {
+    text-decoration: underline;
+}
+
+.register-note a:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid rgba(40, 120, 189, 0.45);
+    outline-offset: 2px;
+}
+
 .footer-note {
     margin: 25px 0 0;
     color: #9aa8b7;

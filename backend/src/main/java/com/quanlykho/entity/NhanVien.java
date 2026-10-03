@@ -2,16 +2,18 @@ package com.quanlykho.entity;
 //cho biết class này nằm trong com.quanlykho.entity
 
 import jakarta.persistence.Entity;//phải có nó  @Entity hoạt động các import khác cũng như vậy
-
-import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;// dùng để đặt khóa chính cho id
 import jakarta.persistence.Table;
 
 @Entity//báo với jpa rằng đây là một thực thể (entity) và sẽ được ánh xạ tới một bảng trong cơ sở dữ liệu.
 @Table(name = "nhan_vien")//ứng bảng nhân viên
 public class NhanVien {
-
+//private tính đóng gói bên ngoài không thể sửa mà phải qua setter
         
     @Id// Mã nhân viên - khóa chính
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long maNV;
 
     // Tên đăng nhập
@@ -93,3 +95,5 @@ public class NhanVien {
         this.vaiTro = vaiTro;
     }
 }
+// khai báo entity,khai báo bảng , khai báo khóa chính và các thành phần bên trong
+//sau đó contructor rỗng và getter setter để jpa hibernate lấy dữ liệu từ db điền vào object

@@ -110,6 +110,15 @@ h1 {
     font-size: 13px;
 }
 
+.login-message.success {
+    color: #21845f;
+}
+
+.login-button:disabled {
+    cursor: wait;
+    opacity: 0.75;
+}
+
 .login-button {
     width: 100%;
     min-height: 46px;

@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "*")
 public class AuthController {
 
     private final NhanVienService nhanVienService;
@@ -17,20 +18,54 @@ public class AuthController {
         this.nhanVienService = nhanVienService;
     }
 
-    // API đăng nhập
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody NhanVien nhanVien) {
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
 
         Optional<NhanVien> ketQua = nhanVienService.login(
-                nhanVien.getTenDangNhap(),
-                nhanVien.getMatKhau()
+                request.tenDangNhap(),
+                request.matKhau()
         );
 
         if (ketQua.isPresent()) {
-            return ResponseEntity.ok(ketQua.get());
+            NhanVien nhanVien = ketQua.get();
+            return ResponseEntity.ok(new AuthResponse(
+                    nhanVien.getMaNV(),
+                    nhanVien.getTenDangNhap(),
+                    nhanVien.getHoTen(),
+                    nhanVien.getVaiTro()
+            ));
         }
 
         return ResponseEntity.status(401)
                 .body("Sai tên đăng nhập hoặc mật khẩu");
     }
+
+    @PostMapping("/register")
+    public ResponseEntity<AuthResponse> register(@RequestBody RegistrationRequest request) {
+        NhanVien nhanVien = nhanVienService.register(
+                request.hoTen(),
+                request.tenDangNhap(),
+                request.email(),
+                request.matKhau(),
+                request.xacNhanMatKhau()
+        );
+        return ResponseEntity.status(201).body(new AuthResponse(
+                nhanVien.getMaNV(),
+                nhanVien.getTenDangNhap(),
+                nhanVien.getHoTen(),
+                nhanVien.getVaiTro()
+        ));
+    }
+
+    public record LoginRequest(String tenDangNhap, String matKhau) {}
+
+    public record RegistrationRequest(
+            String hoTen,
+            String tenDangNhap,
+            String email,
+            String matKhau,
+            String xacNhanMatKhau
+    ) {}
+
+    public record AuthResponse(Long maNV, String tenDangNhap, String hoTen, String vaiTro) {}
 }

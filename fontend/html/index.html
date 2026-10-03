@@ -29,7 +29,7 @@
                 <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true">BC</span><span>Báo cáo</span></a>
             </nav>
 
-            <a class="nav-item logout" href="#">
+            <a class="nav-item logout" href="DangNhap.html">
                 <span class="nav-icon" aria-hidden="true">↪</span>
                 <span>Đăng xuất</span>
             </a>
@@ -40,11 +40,14 @@
                 <div>
                     <p class="eyebrow">THỨ HAI, 29 THÁNG 9, 2026</p>
                     <h1>Tổng quan kho hàng</h1>
-                    <p class="welcome">Chào buổi sáng, Minh. Đây là tình hình kho của bạn hôm nay.</p>
+                    <p class="welcome">Chào mừng, <span id="welcome-name">bạn</span>. Đây là tình hình kho của bạn hôm nay.</p>
                 </div>
                 <div class="user-summary" aria-label="Thông tin người dùng">
-                    <span class="avatar">M</span>
-                    <span class="user-details"><strong>Minh Nguyễn</strong><small>Quản trị viên</small></span>
+                    <span class="avatar" id="user-avatar" aria-hidden="true">T</span>
+                    <span class="user-details">
+                        <strong id="user-name">Tài khoản</strong>
+                        <small id="user-role">Chưa đăng nhập</small>
+                    </span>
                 </div>
             </header>
 
@@ -103,6 +106,7 @@
             </section>
         </main>
     </div>
+    <script src="../js/trang-chu.js"></script>
 </body>
 </html>
 <!DOCTYPE html>

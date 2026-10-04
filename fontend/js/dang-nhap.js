@@ -37,7 +37,7 @@ loginForm.addEventListener("submit", async (event) => {
 
         sessionStorage.setItem("userName", result.hoTen.trim());
         sessionStorage.setItem("userRole", result.vaiTro);
-        window.location.href = "index.html";
+        window.location.href = result.vaiTro === "QUAN_LY" ? "index.html" : "index2.html";
     } catch (error) {
         loginMessage.textContent = error instanceof TypeError
             ? "Không thể kết nối máy chủ. Hãy kiểm tra backend đang chạy."

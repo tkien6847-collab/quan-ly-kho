@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng quan kho hàng | Quản lý kho</title>
+    <link rel="stylesheet" href="../css/index2.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-mark" aria-hidden="true">K</span>
+                <span class="brand-name">QUẢN LÝ KHO</span>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Điều hướng chính">
+                <p class="nav-label">Không gian làm việc</p>
+                <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true">SP</span><span>Sản phẩm</span></a>
+                <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true">NK</span><span>Nhập kho</span></a>
+                <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true">XK</span><span>Xuất kho</span></a>
+                <a class="nav-item" href="#"><span class="nav-icon" aria-hidden="true">TK</span><span>Tồn kho</span></a>
+            </nav>
+
+            <a class="nav-item logout" href="DangNhap.html">
+                <span class="nav-icon" aria-hidden="true">↪</span>
+                <span>Đăng xuất</span>
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">THỨ HAI, 29 THÁNG 9, 2026</p>
+                    <h1>Tổng quan kho hàng</h1>
+                    <p class="welcome">Chào mừng, <span id="welcome-name">bạn</span>. Đây là tình hình kho của bạn hôm nay.</p>
+                </div>
+                <div class="user-summary" aria-label="Thông tin người dùng">
+                    <span class="avatar" id="user-avatar" aria-hidden="true">T</span>
+                    <span class="user-details">
+                        <strong id="user-name">Tài khoản</strong>
+                        <small id="user-role">Chưa đăng nhập</small>
+                    </span>
+                </div>
+            </header>
+
+            <section class="stats-grid" aria-label="Số liệu tổng quan">
+                <article class="stat-card">
+                    <div class="stat-heading"><span class="stat-icon blue">SP</span><span class="trend neutral">0</span></div>
+                    <p class="stat-label">Tổng sản phẩm</p>
+                    <strong class="stat-value">0</strong>
+                    <p class="stat-note">Chưa có dữ liệu</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-heading"><span class="stat-icon green">NK</span><span class="trend neutral">0</span></div>
+                    <p class="stat-label">Phiếu nhập</p>
+                    <strong class="stat-value">0</strong>
+                    <p class="stat-note">Chưa có dữ liệu</p>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-heading"><span class="stat-icon orange">XK</span><span class="trend neutral">0</span></div>
+                    <p class="stat-label">Phiếu xuất</p>
+                    <strong class="stat-value">0</strong>
+                    <p class="stat-note">Chưa có dữ liệu</p>
+                </article>
+                <article class="stat-card warning-card">
+                    <div class="stat-heading"><span class="stat-icon red">!</span><span class="trend neutral">0</span></div>
+                    <p class="stat-label">Sản phẩm sắp hết</p>
+                    <strong class="stat-value">0</strong>
+                    <p class="stat-note">Chưa có dữ liệu</p>
+                </article>
+            </section>
+
+            <section class="inventory-section" aria-labelledby="inventory-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">TỔNG HỢP THEO NHÓM</p>
+                        <h2 id="inventory-title">Tình trạng kho</h2>
+                    </div>
+                    <span class="updated-time">Chưa có dữ liệu nhập xuất</span>
+                </div>
+
+                <div class="inventory-layout">
+                    <div class="inventory-overview">
+                        <div class="donut" aria-label="Chưa có dữ liệu kho"><span><strong>0%</strong><small>Chưa có dữ liệu</small></span></div>
+                        <div class="legend">
+                            <div><span class="legend-dot in-stock"></span><span>Còn hàng tốt</span><strong>0</strong></div>
+                            <div><span class="legend-dot low-stock"></span><span>Sắp hết</span><strong>0</strong></div>
+                            <div><span class="legend-dot out-stock"></span><span>Hết hàng</span><strong>0</strong></div>
+                        </div>
+                    </div>
+                    <div class="category-list">
+                        <div class="category-row"><div class="category-info"><span class="category-badge">ĐT</span><span><strong>Điện tử</strong><small>0 sản phẩm</small></span></div><span class="stock-status neutral-status">Chưa có dữ liệu</span><div class="progress"><span style="width: 0"></span></div></div>
+                        <div class="category-row"><div class="category-info"><span class="category-badge">VP</span><span><strong>Văn phòng phẩm</strong><small>0 sản phẩm</small></span></div><span class="stock-status neutral-status">Chưa có dữ liệu</span><div class="progress"><span style="width: 0"></span></div></div>
+                        <div class="category-row"><div class="category-info"><span class="category-badge">GD</span><span><strong>Gia dụng</strong><small>0 sản phẩm</small></span></div><span class="stock-status neutral-status">Chưa có dữ liệu</span><div class="progress"><span style="width: 0"></span></div></div>
+                        <div class="category-row"><div class="category-info"><span class="category-badge">TP</span><span><strong>Thực phẩm khô</strong><small>0 sản phẩm</small></span></div><span class="stock-status neutral-status">Chưa có dữ liệu</span><div class="progress"><span style="width: 0"></span></div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../js/trang-chu.js"></script>
+</body>
+</html>
